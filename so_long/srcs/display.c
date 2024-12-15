@@ -62,7 +62,7 @@ void	show_fail_message(t_data *data)
 		mlx_put_image_to_window(data->mlx, data->win, data->env->standfck,
 			data->x, data->y);
 		mlx_string_put(data->mlx, data->win, data->x + 60, data->y, 0xFFFF0000,
-			"Va te faire mettre, connard !");
+			"Bon, concentre-toi !");
 	}
 }
 
