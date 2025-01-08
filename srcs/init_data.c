@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:07:20 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/07 06:35:08 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/08 19:37:42 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	init_window_and_env(t_data *data)
 
 int	init_data(t_data *data, char *filename)
 {
-	bzero(data, sizeof(t_data));
+	ft_bzero(data, sizeof(t_data));
 	data->map = get_contents(filename);
 	if (!data->map)
 		return (1);

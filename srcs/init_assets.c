@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 04:28:01 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/05 05:37:07 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/08 19:47:15 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	load_image(t_data *data, t_environment *env_data, char *path, void **image)
 	int	width;
 	int	height;
 
+	(void)env_data;
 	*image = mlx_png_file_to_image(data->mlx, path, &width, &height);
 	if (*image == NULL)
 		return (1);

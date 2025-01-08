@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 02:33:14 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/07 02:33:17 by mforest-         ###   ########.fr       */
+/*   Updated: 2024/12/21 19:05:19 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	show_fail_message(t_data *data)
 		mlx_put_image_to_window(data->mlx, data->win, data->env->standfck,
 			data->x, data->y);
 		mlx_string_put(data->mlx, data->win, data->x + 60, data->y, 0xFFFF0000,
-			"Bon, concentre-toi !");
+			"Fuck off!");
 	}
 }
 

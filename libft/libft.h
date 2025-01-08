@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:49:29 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/02 04:56:29 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/08 19:43:36 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ size_t				ft_strlen(const char *s);
 char				*concat(char *s1, char *s2, int len);
 char				*get_contents_from_fd(int fd);
 char				*get_contents(const char *filename);
-char				*get_next_line(int fd);
 void				ft_read(int fd, t_list **tmp);
 void				add_to_tmp(t_list **tmp, char *buffer, int count);
 void				extract_line(t_list *tmp, char **line);
@@ -73,6 +72,6 @@ void				free_tmp(t_list *tmp);
 size_t				ft_strlen(const char *s);
 int					has_prefix(const char *filename, char *str);
 int					has_suffix(const char *filename, char *str);
-int					ft_strvlen(void **tab);
+int					ft_strvlen(char **tab);
 int					ft_count(const char *str, char c);
 #endif

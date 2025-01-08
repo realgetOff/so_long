@@ -6,11 +6,11 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 00:38:21 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/02 00:39:47 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/08 19:40:08 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strvlen(void **tab)
+int	ft_strvlen(char **tab)
 {
 	int	i;
 

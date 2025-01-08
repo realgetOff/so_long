@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:08:20 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/07 05:40:44 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/08 19:41:36 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ int					init_sprites(t_data *data, t_environment *env_data);
 int					init_assets(t_data *data, t_environment *env_data);
 int					init_assets_score(t_data *data, t_environment *env_data);
 int					init_score(t_data *data);
+int					init_map(t_data *data);
 int					check_game_over(t_data *data);
 void				handle_interaction(t_data *data, int map_x, int map_y);
 int					move_up(t_data *data);
