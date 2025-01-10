@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   has_suffix.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 22:44:01 by mforest-          #+#    #+#             */
-/*   Updated: 2025/01/10 02:29:20 by mforest-         ###   ########.fr       */
+/*   Created: 2025/01/10 05:58:17 by mforest-          #+#    #+#             */
+/*   Updated: 2025/01/10 05:58:19 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	has_suffix(const char *filename, char *str)
+char	*ft_strdup(const char *s)
 {
-	int	i;
-	int	j;
+	int		a;
+	char	*ctrlv;
 
-	i = 0;
-	j = 0;
-	while (filename[i])
-		i++;
-	while (str[j])
-		j++;
-	if (j > i)
-		return (0);
-	while (str[j - 1] == filename[i - 1] && j > 0)
+	a = 0;
+	while (s[a])
+		a++;
+	ctrlv = (char *)malloc((a + 1) * (sizeof(char)));
+	if (!ctrlv)
+		return (NULL);
+	a = 0;
+	while (s[a])
 	{
-		i--;
-		j--;
+		ctrlv[a] = s[a];
+		a++;
 	}
-	if (j == 0)
-		return (0);
-	return (1);
+	ctrlv[a] = '\0';
+	return (ctrlv);
 }

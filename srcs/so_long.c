@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:43:48 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/07 06:22:55 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:48:11 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main(int ac, char **av)
 		if (init_data(&data, av[1]))
 		{
 			destroy_data(&data);
+			free(data.map);
+			ft_strvfree(data.map_tab);
 			return (1);
 		}
 		mlx_set_font_scale(data.mlx, data.win, "textures/font.ttf", 18.0f);
@@ -31,9 +33,10 @@ int	main(int ac, char **av)
 		mlx_set_fps_goal(data.mlx, FPS);
 		mlx_loop(data.mlx);
 		destroy_data(&data);
+		free(data.map);
+		ft_strvfree(data.map_tab);
 		return (0);
 	}
-	else
-		ft_printf("Error\nNeed two args!\n");
+	ft_perror("Need two args.");
 	return (0);
 }

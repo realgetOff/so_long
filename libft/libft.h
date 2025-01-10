@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:49:29 by mforest-          #+#    #+#             */
-/*   Updated: 2025/01/08 19:43:36 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:22:21 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,18 @@ size_t				ft_putnbr(const int n);
 size_t				ft_putstr(const char *str);
 size_t				ft_putunbr(const unsigned int n);
 char				**ft_split(char const *s, char c);
+void				ft_strvfree(char **tab);
 size_t				ft_strlen(const char *s);
-char				*concat(char *s1, char *s2, int len);
 char				*get_contents_from_fd(int fd);
 char				*get_contents(const char *filename);
 void				ft_read(int fd, t_list **tmp);
 void				add_to_tmp(t_list **tmp, char *buffer, int count);
 void				extract_line(t_list *tmp, char **line);
 void				clean(t_list **tmp);
+void				ft_free_tab(int **tab, int size);
+char				*ft_strdup(const char *s);
 int					ft_nl(t_list *tmp);
+void				ft_perror(char *string);
 t_list				*get_last(t_list *tmp);
 void				gen_line(char **line, t_list *tmp);
 void				free_tmp(t_list *tmp);

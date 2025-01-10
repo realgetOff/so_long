@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:07:20 by mforest-          #+#    #+#             */
-/*   Updated: 2025/01/08 19:37:42 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:48:25 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ int	init_window_and_env(t_data *data)
 
 int	init_data(t_data *data, char *filename)
 {
+	ft_printf("\e[1;1H\e[2J");
 	ft_bzero(data, sizeof(t_data));
 	data->map = get_contents(filename);
-	if (!data->map)
+	if (data->map == NULL)
 		return (1);
 	data->alan = ft_count(data->map, 'C');
 	data->count_c = ft_count(data->map, 'C');
@@ -47,9 +48,11 @@ int	init_data(t_data *data, char *filename)
 	data->count_g = ft_count(data->map, 'G');
 	data->count_e = ft_count(data->map, 'E');
 	data->map_tab = ft_split(data->map, '\n');
+	if (data->map_tab == NULL)
+		return (1);
 	if (map_core(filename, data))
 		return (1);
-	if (find_path(0, -1, -1, data))
+	if (find_path(data))
 		return (1);
 	if (!data->map_tab)
 		return (1);

@@ -6,13 +6,13 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:42:46 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/07 06:20:31 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:31:55 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	destroy_img_one(t_data *data)
+static void	destroy_img_one(t_data *data)
 {
 	int	i;
 
@@ -41,7 +41,7 @@ void	destroy_img_one(t_data *data)
 		mlx_destroy_image(data->mlx, data->env->alan2);
 }
 
-void	destroy_img_two(t_data *data)
+static void	destroy_img_two(t_data *data)
 {
 	if (data->env->alan4)
 		mlx_destroy_image(data->mlx, data->env->alan4);

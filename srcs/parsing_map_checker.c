@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 05:12:32 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/07 06:24:24 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:29:32 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_check_col(t_data *data)
 	{
 		if (data->map_tab[map_y][0] != WALL)
 		{
-			ft_printf("Error\nColumn not closed\n");
+			ft_perror("Column not closed");
 			return (1);
 		}
 		map_x = 0;
@@ -32,7 +32,7 @@ int	ft_check_col(t_data *data)
 		}
 		if (data->map_tab[map_y][map_x - 1] != WALL)
 		{
-			ft_printf("Error\nColumn not closed\n");
+			ft_perror("Column not closed");
 			return (1);
 		}
 		map_y++;
@@ -46,7 +46,7 @@ int	ft_check_line(t_data *data)
 
 	if (data->count_e > 1 || data->count_p > 1)
 	{
-		ft_printf("Error\nToo much exit and/or starting pos\n");
+		ft_perror("Too much exit and/or starting pos");
 		return (1);
 	}
 	map_y = 0;
@@ -70,7 +70,7 @@ int	ft_check_line_edges(t_data *data, int map_y)
 		{
 			if (data->map_tab[map_y][map_x] != WALL)
 			{
-				ft_printf("Error\nLine not closed\n");
+				ft_perror("Line not closed");
 				return (1);
 			}
 			map_x++;
@@ -97,7 +97,7 @@ int	ft_check_other(t_data *data)
 				&& data->map_tab[map_y][map_x] != GRUNT
 				&& data->map_tab[map_y][map_x] != SPACE)
 			{
-				ft_printf("Error\nUnkown symbols in map\n");
+				ft_perror("Unkown symbols in map");
 				return (1);
 			}
 			map_x++;
@@ -118,7 +118,7 @@ int	ft_check_format(t_data *data)
 	{
 		if (ft_strlen(data->map_tab[map_y]) != count_x)
 		{
-			ft_printf("Error\nMap isn't a square or a rectangle\n");
+			ft_perror("Map isn't a square or a rectangle");
 			return (1);
 		}
 		map_y++;

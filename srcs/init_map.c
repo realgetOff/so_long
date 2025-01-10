@@ -6,13 +6,13 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:16:43 by mforest-          #+#    #+#             */
-/*   Updated: 2025/01/08 19:40:48 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:44:50 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	check_map_until(t_data *data, char *img, char word)
+static void	check_map_until(t_data *data, char *img, char word)
 {
 	int	map_x;
 	int	map_y;

@@ -6,13 +6,13 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:58:36 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/01 03:44:49 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:18:56 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*concat(char *s1, char *s2, int len)
+static char	*concat(char *s1, char *s2, int len)
 {
 	int		s1_len;
 	int		len_max;
@@ -21,14 +21,14 @@ char	*concat(char *s1, char *s2, int len)
 	if (s2 == NULL)
 		return (NULL);
 	if (s1 == NULL)
-		return (strdup(s2));
-	s1_len = strlen(s1);
+		return (ft_strdup(s2));
+	s1_len = ft_strlen(s1);
 	len_max = len + 1 + s1_len;
 	new = malloc(sizeof(char) * len_max + 1);
 	if (!new)
 		return (NULL);
-	memcpy(new, s1, s1_len);
-	memcpy(new + s1_len, s2, len + 1);
+	ft_memcpy(new, s1, s1_len);
+	ft_memcpy(new + s1_len, s2, len + 1);
 	new [s1_len + len] = '\0';
 	return (new);
 }

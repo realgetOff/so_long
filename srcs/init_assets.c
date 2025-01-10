@@ -6,13 +6,14 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 04:28:01 by mforest-          #+#    #+#             */
-/*   Updated: 2025/01/08 19:47:15 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:57:23 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	load_image(t_data *data, t_environment *env_data, char *path, void **image)
+static int	load_image(t_data *data, t_environment *env_data, char *path,
+		void **image)
 {
 	int	width;
 	int	height;

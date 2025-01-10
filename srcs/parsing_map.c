@@ -6,7 +6,7 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 04:54:01 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/07 06:20:11 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:28:18 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,9 @@ int	parse_map(t_data *data)
 
 char	map_core(char *str, t_data *data)
 {
-	data->map_tab = ft_split(data->map, '\n');
 	if (has_suffix(str, ".ber"))
 	{
-		ft_printf("Error\nBad map format\n");
+		ft_perror("Bad map format");
 		return (1);
 	}
 	if (parse_map(data))
@@ -56,7 +55,7 @@ char	map_core(char *str, t_data *data)
 		&& data->map_tab)
 	{
 		ft_free_map(data);
-		ft_printf("Error\nMiss exit and/or starting pos and/or collectibles\n");
+		ft_perror("Miss exit and/or starting pos and/or collectibles");
 		return (1);
 	}
 	return (0);

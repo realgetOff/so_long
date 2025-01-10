@@ -6,13 +6,13 @@
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 02:33:14 by mforest-          #+#    #+#             */
-/*   Updated: 2024/12/21 19:05:19 by mforest-         ###   ########.fr       */
+/*   Updated: 2025/01/10 05:31:14 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	draw_background(t_data *data)
+static void	draw_background(t_data *data)
 {
 	int	i;
 	int	j;
@@ -41,7 +41,7 @@ void	draw_background(t_data *data)
 	}
 }
 
-void	handle_movement(t_data *data)
+static void	handle_movement(t_data *data)
 {
 	if (data->move_up)
 		display_movement_up(data);
@@ -55,7 +55,7 @@ void	handle_movement(t_data *data)
 		display_movement_stand(data);
 }
 
-void	show_fail_message(t_data *data)
+static void	show_fail_message(t_data *data)
 {
 	if (data->fail > 5)
 	{
@@ -66,7 +66,7 @@ void	show_fail_message(t_data *data)
 	}
 }
 
-void	show_start_screen(t_data *data)
+static void	show_start_screen(t_data *data)
 {
 	if ((data->start_button + data->move_up + data->move_down + data->move_left
 			+ data->move_right) == 0)

@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   has_suffix.c                                       :+:      :+:    :+:   */
+/*   ft_perror.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 22:44:01 by mforest-          #+#    #+#             */
-/*   Updated: 2025/01/10 02:29:20 by mforest-         ###   ########.fr       */
+/*   Created: 2025/01/07 22:12:49 by mforest-          #+#    #+#             */
+/*   Updated: 2025/01/10 05:47:06 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	has_suffix(const char *filename, char *str)
+void	ft_perror(char *string)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (filename[i])
-		i++;
-	while (str[j])
-		j++;
-	if (j > i)
-		return (0);
-	while (str[j - 1] == filename[i - 1] && j > 0)
-	{
-		i--;
-		j--;
-	}
-	if (j == 0)
-		return (0);
-	return (1);
+	ft_printf("\e[1;1H\e[2J"
+		"\e[1;31m[ERROR]\e[m\n"
+		"\e[3;31m%s.\e[m\n", string);
 }

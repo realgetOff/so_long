@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   has_suffix.c                                       :+:      :+:    :+:   */
+/*   ft_strvfree.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mforest- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 22:44:01 by mforest-          #+#    #+#             */
-/*   Updated: 2025/01/10 02:29:20 by mforest-         ###   ########.fr       */
+/*   Created: 2025/01/09 21:24:34 by mforest-          #+#    #+#             */
+/*   Updated: 2025/01/10 05:57:53 by mforest-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	has_suffix(const char *filename, char *str)
+void	ft_free_tab(int **tab, int size)
 {
-	int	i;
 	int	j;
 
-	i = 0;
 	j = 0;
-	while (filename[i])
-		i++;
-	while (str[j])
-		j++;
-	if (j > i)
-		return (0);
-	while (str[j - 1] == filename[i - 1] && j > 0)
+	while (j < size)
 	{
-		i--;
-		j--;
+		free(tab[j]);
+		j++;
 	}
-	if (j == 0)
-		return (0);
-	return (1);
+	free(tab);
+}
+
+void	ft_strvfree(char **tab)
+{
+	int	i;
+
+	i = 0;
+	if (!tab)
+		return ;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }
