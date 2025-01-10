@@ -6,7 +6,7 @@
 	<img src="https://img.shields.io/badge/status-finished-cyan"/>
 	<img src="https://img.shields.io/badge/evaluated-14%20%2F%2001%20%2F%202025-cyan"/>
 	<img src="https://img.shields.io/badge/score-125%2F100-cyan"/>
-	<img src="https://img.shields.io/badge/language-C_96.8%25-cyan"/>
+	<img src="https://img.shields.io/badge/language-C_95.1%25-cyan"/>
 	<img src="https://img.shields.io/badge/last_commit-january-cyan"/>
 	<a href='https://profile.intra.42.fr/users/mforest-' target="_blank"><img alt='42' src='https://img.shields.io/badge/Intra-100000?style=flat-round&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
 </p>
