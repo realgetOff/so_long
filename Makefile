@@ -45,7 +45,7 @@ all: $(NAME)
 # 📦 **Compilation de la librairie MLX**
 MacroLibX:
 	@echo "[Git] $(BLUE)Clone de la : 'MacroLibX'$(WHITE)"
-	@git clone https://github.com/seekrs/MacroLibX.git
+	@git clone https://github.com/seekrs/MacroLibX.git -b v1.3.3
 
 $(MLX): MacroLibX
 	@echo "[Makefile] $(CYAN)Compilation de MacroLibX...$(RESET)"
