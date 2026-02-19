@@ -18,8 +18,7 @@
 	<a href="#mandatory">Mandatory</a> •
 	<a href="#bonus">Bonus</a> •
 	<a href="#norminette">Norminette</a> •
-	<a href="#contributing">Contributing</a> •
-	<a href="#license">License</a>
+	<a href="#contributing">Contributing</a>
 </p>
 
 ## ABOUT
